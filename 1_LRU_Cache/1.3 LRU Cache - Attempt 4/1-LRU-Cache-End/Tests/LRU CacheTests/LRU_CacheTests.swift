@@ -13,8 +13,11 @@ final class LRU_CacheTests: XCTestCase {
         XCTAssertEqual(cache.read(3), 3) // [4, 2, 3]
         XCTAssertEqual(cache.read(4), 4) // [2, 3, 4]
         
-        cache.write (5) // 2 [3, 4, 5]
+        print(cache.list)
         
+        cache.write (5) // 2 [3, 4, 5]
+       
+        print("write(5): \(cache.list)")
         XCTAssertEqual(cache.read(2), nil)
         XCTAssertEqual(cache.read(3), 3) // [4, 5, 3]
         XCTAssertEqual(cache.read(4), 4) // [5, 3, 4]
