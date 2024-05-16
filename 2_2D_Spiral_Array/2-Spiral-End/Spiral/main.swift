@@ -14,75 +14,55 @@ print("Enter a size: ")
 
 //guard maxSize > 0 else { fatalError("Invalid size") }
 
-let maxSize = 3
+let maxSize = 8
 var row = Array<Int>(repeating: 0, count: maxSize)
 var grid = Array<[Int]>(repeating: row, count: maxSize)
 //grid[0][0] = 1
 //grid[0][1] = 2 // grid[y][x]
 
-enum Direction {
-    case right, down, left, up
-    
-    func nextDirection(_ direction: Direction) -> Direction {
-        switch direction {
-        case .right: return .down
-        case .down: return .left
-        case .left: return .up
-        case .up: return .right
-        }
-    }
-}
-
-var direction = Direction.right
+var direction = 0
 var size = maxSize
 
-if size == 1 {
-    grid[0][0] = 1
-} else if size >= 2 {
-    
+func isValidMove(x: Int, y: Int, grid: [[Int]]) -> Bool {
+    return x >= 0 && x < grid.count &&
+    y >= 0 && y < grid.count &&
+    grid[y][x] == 0
 }
 
-
+let maxValue = maxSize * maxSize
 var value = 1
+let dx = [1, 0, -1, 0] // clockwise [dx, dy] movement - always turn right
+let dy = [0, 1, 0, -1]
+var x = 0
+var y = 0
 
-while size - 2 > 0 {
-    var startRow = 0 // TODO: Inset on each completion
-    var startCol = 0
-    for x in startCol ..< size {
-        let i = startRow
-        let j = startCol + x
-        print("\(i), \(j): \(value)")
-        grid[i][j] = value
-        value += 1
-//        print(x)
-    }
-    startRow += 1
-    size -= 1
+while value <= maxValue {
+    grid[y][x] = value
+    printGrid(grid)
     
-    for y in 0 ..< size {
-        let i = startRow + y
-        let j = startCol + size
-        print("\(i), \(j): \(value)")
-        grid[i][j] = value
-        value += 1
+    let nextX = x + dx[direction]
+    let nextY = y + dy[direction]
+
+    if isValidMove(x: nextX,
+                   y: nextY, grid: grid) {
+        print("move to x: \(nextX), y: \(nextY)")
+        x = nextX
+        y = nextY
+    } else {
+        // turn right
+        direction = (direction + 1) % 4 // only 4 turns
+        print("turn: dx: \(dx[direction]), dy: \(dy[direction])")
+        
+        x += dx[direction]
+        y += dy[direction]
     }
+
     
-    for x in startCol ..< size {
-        let i = startCol + size - 1 - x
-        let j = startRow + size - 1
-        print("\(i), \(j): \(value)")
-        grid[i][j] = value
-        value += 1
-    }
-    
-    for y in 0 ..< size {
-        let i = 2
-        let j = 1
-        print("\(i), \(j): \(value)")
-    }
-    
-    size -= 1
+    value += 1
 }
+
+
+
 
 printGrid(grid)
 
