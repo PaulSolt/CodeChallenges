@@ -10,7 +10,8 @@
 ## Pitfalls
 
 1. Prevent retain cycles by making your Double Linked List `Node`'s `previous` a `weak` variable.
-2. Watch out for a infinite loop if you delete and re-insert the same `Node`. It is easy to create a cycle that will hang. Reset both `previous` and `next` values on every insertion. 
+2. Watch out for a infinite loop if you delete and re-insert the same `Node`. It is easy to create a cycle that will hang. 
+	1. Reset both `previous` and `next` values on every insertion. 
 
 ## Fundamental Skills Required (Practice) 
 
