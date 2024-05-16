@@ -9,7 +9,7 @@ import Foundation
 
 // Starter project to get size from Console or Command Line
 
-let size = readLine()
-print("Size: \(size)")
+print("Enter a size: ")
+guard let size = readLine() else { fatalError("Unable to read input") }
  
 
