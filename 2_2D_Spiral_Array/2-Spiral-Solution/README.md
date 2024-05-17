@@ -38,3 +38,12 @@ input = 8
 Get input from user
 
 let size = readLine()
+
+## Hints
+
+1. Turn right when you hit any invalid position
+2. If you fill the grid with users, you can treat 0 as an invalid position
+3. Encode turns as an array for both the x and y directions
+4. Value is 1-based, but your algorithm needs to run for `input` steps
+
+[Notes on 2D Spiral Array](2-2D_Spiral_Array.pdf)

@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BD2F5BCA2BF625C0001E4D23 /* Spiral-End */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Spiral-End"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD2F5BCA2BF625C0001E4D23 /* Spiral-Solution */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Spiral-Solution"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD2F5BCD2BF625C0001E4D23 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BD2F5BD42BF625CB001E4D23 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,7 +51,7 @@
 		BD2F5BCB2BF625C0001E4D23 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD2F5BCA2BF625C0001E4D23 /* Spiral-End */,
+				BD2F5BCA2BF625C0001E4D23 /* Spiral-Solution */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,9 +67,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BD2F5BC92BF625C0001E4D23 /* Spiral-End */ = {
+		BD2F5BC92BF625C0001E4D23 /* Spiral-Solution */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD2F5BD12BF625C0001E4D23 /* Build configuration list for PBXNativeTarget "Spiral-End" */;
+			buildConfigurationList = BD2F5BD12BF625C0001E4D23 /* Build configuration list for PBXNativeTarget "Spiral-Solution" */;
 			buildPhases = (
 				BD2F5BC62BF625C0001E4D23 /* Sources */,
 				BD2F5BC72BF625C0001E4D23 /* Frameworks */,
@@ -79,9 +79,9 @@
 			);
 			dependencies = (
 			);
-			name = "Spiral-End";
+			name = "Spiral-Solution";
 			productName = Spiral;
-			productReference = BD2F5BCA2BF625C0001E4D23 /* Spiral-End */;
+			productReference = BD2F5BCA2BF625C0001E4D23 /* Spiral-Solution */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +99,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BD2F5BC52BF625BF001E4D23 /* Build configuration list for PBXProject "Spiral-End" */;
+			buildConfigurationList = BD2F5BC52BF625BF001E4D23 /* Build configuration list for PBXProject "Spiral-Solution" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BD2F5BC92BF625C0001E4D23 /* Spiral-End */,
+				BD2F5BC92BF625C0001E4D23 /* Spiral-Solution */,
 			);
 		};
 /* End PBXProject section */
@@ -268,7 +268,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BD2F5BC52BF625BF001E4D23 /* Build configuration list for PBXProject "Spiral-End" */ = {
+		BD2F5BC52BF625BF001E4D23 /* Build configuration list for PBXProject "Spiral-Solution" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD2F5BCF2BF625C0001E4D23 /* Debug */,
@@ -277,7 +277,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD2F5BD12BF625C0001E4D23 /* Build configuration list for PBXNativeTarget "Spiral-End" */ = {
+		BD2F5BD12BF625C0001E4D23 /* Build configuration list for PBXNativeTarget "Spiral-Solution" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD2F5BD22BF625C0001E4D23 /* Debug */,
