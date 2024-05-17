@@ -10,15 +10,13 @@ import Foundation
 // Starter project to get size from Console or Command Line
 
 print("Enter a size: ")
-//guard let line = readLine(), let maxSize = Int(line) else { fatalError("Unable to read input") }
+guard let line = readLine(), let maxSize = Int(line) else { fatalError("Unable to read input") }
 
-//guard maxSize > 0 else { fatalError("Invalid size") }
+guard maxSize > 0 else { fatalError("Invalid size") }
 
-let maxSize = 8
+//let maxSize = 8
 var row = Array<Int>(repeating: 0, count: maxSize)
-var grid = Array<[Int]>(repeating: row, count: maxSize)
-//grid[0][0] = 1
-//grid[0][1] = 2 // grid[y][x]
+var grid = Array<[Int]>(repeating: row, count: maxSize) // grid[y][x]
 
 var direction = 0
 var size = maxSize
@@ -64,7 +62,7 @@ while value <= maxValue {
 
 
 
-printGrid(grid)
+//printGrid(grid)
 
 func printGrid(_ grid: [[Int]]) {
     var output = ""
