@@ -14,7 +14,6 @@ guard let line = readLine(), let maxSize = Int(line) else { fatalError("Unable t
 
 guard maxSize > 0 else { fatalError("Invalid size") }
 
-//let maxSize = 8
 var row = Array<Int>(repeating: 0, count: maxSize)
 var grid = Array<[Int]>(repeating: row, count: maxSize) // grid[y][x]
 
@@ -36,21 +35,17 @@ var y = 0
 
 while value <= maxValue { // value is 1-based
     grid[y][x] = value
-    printGrid(grid)
 
     let nextX = x + dx[direction]
     let nextY = y + dy[direction]
 
     if isValidMove(x: nextX,
                    y: nextY, grid: grid) {
-        print("move to x: \(nextX), y: \(nextY)")
         x = nextX
         y = nextY
     } else {
         // turn right
         direction = (direction + 1) % 4 // only 4 turns
-        print("turn: dx: \(dx[direction]), dy: \(dy[direction])")
-        
         x += dx[direction]
         y += dy[direction]
     }
@@ -58,10 +53,7 @@ while value <= maxValue { // value is 1-based
     value += 1
 }
 
-
-
-
-//printGrid(grid)
+printGrid(grid)
 
 func printGrid(_ grid: [[Int]]) {
     var output = ""
