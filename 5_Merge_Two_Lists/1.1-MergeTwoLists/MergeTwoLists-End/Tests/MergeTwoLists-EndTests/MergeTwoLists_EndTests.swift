@@ -37,12 +37,9 @@ extension ListNode: Equatable {
         print("compare: \(lhs?.val ?? "nil" as Any) to \(rhs?.val ?? "nil" as Any)")
         if lhs == nil && rhs == nil {
             return true
-        }
-        if lhs == nil || rhs == nil {
+        } else if lhs == nil || rhs == nil {
             return false
-        }
-        
-        if lhs?.val != rhs?.val {
+        } else if lhs?.val != rhs?.val {
             return false
         }
         return compare(lhs: lhs?.next, rhs: rhs?.next)
@@ -52,8 +49,7 @@ extension ListNode: Equatable {
     public static func compare2(lhs: ListNode?, rhs: ListNode?) -> Bool {
         if lhs == nil && rhs == nil {
             return true
-        }
-        if lhs == nil || rhs == nil {
+        } else if lhs == nil || rhs == nil {
             return false
         }
        
@@ -80,14 +76,13 @@ extension ListNode: Equatable {
 
 func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
     // base cases
-    // guard let list1, let list2 else { return nil }
     if list1 == nil && list2 != nil {
         return list2
-    }
-    if list1 != nil && list2 == nil {
+    } else if list1 != nil && list2 == nil {
         return list1
     }
-    // Do at end? Then we don't need to dance aroudn it
+    
+    // Do at end? Then we don't need to dance around it
     guard let head1 = list1, let head2 = list2 else { return nil }
     let head: ListNode?
     
