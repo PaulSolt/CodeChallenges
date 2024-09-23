@@ -61,33 +61,7 @@ class Solution {
 
 // Not Full: [1,2,2,3,null,null,3,4,null,null,4]
 
-
-//class BinaryTreeBuilder {
-//    func buildTree(_ elements: [Int?]) -> TreeNode? {
-//        guard !elements.isEmpty else { return nil }
-//        
-//        var index = 0
-//        return buildTreeHelper(elements, &index)
-//    }
-//    
-//    private func buildTreeHelper(_ elements: [Int?], _ index: inout Int) -> TreeNode? {
-//        guard index < elements.count else { return nil }
-//        
-//        guard let val = elements[index] else {
-//            index += 1
-//            return nil
-//        }
-//        
-//        let node = TreeNode(val)
-//        index += 1
-//        node.left = buildTreeHelper(elements, &index)
-//        index += 1
-//        node.right = buildTreeHelper(elements, &index)
-//        
-//        return node
-//    }
-//}
-
+// Builder from chatGPT for testing LeetCode solutions
 class BinaryTreeBuilder {
     func buildTree(_ elements: [Int?]) -> TreeNode? {
         return buildTreeHelper(elements, 0)
